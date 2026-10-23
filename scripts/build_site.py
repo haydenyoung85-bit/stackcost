@@ -2,7 +2,7 @@
 """Builds static site into site/ from data/hosts.json. Run after updating prices."""
 import json,pathlib,html
 R=pathlib.Path(__file__).resolve().parent.parent;S=R/"site";D=json.load(open(R/"data/hosts.json"))
-BASE="https://haydenyoung85-bit.github.io/stackcost"
+BASE="https://selfhostcalc.com"
 H={h["id"]:h for h in D["hosts"]};U=D["updated"];N={p["name"]:p for p in D["n8n_cloud"]["plans"]}
 (S/"assets/data.js").write_text("window.SC="+json.dumps(D,separators=(",",":"))+";")
 NAV=[("index.html","Prices"),("calculator.html","Calculator"),("compare/cheapest-vps-for-n8n.html","Cheapest VPS"),("compare/n8n-cloud-vs-self-hosted.html","Cloud vs self-host"),("about.html","About")]
