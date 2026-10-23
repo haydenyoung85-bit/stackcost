@@ -11,11 +11,12 @@ var tb=$("#tbody");if(tb){var sk="renew",dir=1;
    var spec=[p.vcpu!=null?p.vcpu+" vCPU":"? vCPU",p.ram_gb!=null?p.ram_gb+" GB RAM":"? RAM",p.storage_gb!=null?p.storage_gb+" GB "+(p.storage_type||""):"? disk"].join(" · ");
    return '<tr><td class="h">'+h.name+'<div class="small">'+p.name+'</div></td><td class="spec">'+spec+'</td>'+
    '<td class="price num">'+(rn?'<div class="renew">'+rn+'<span class="small">/mo</span></div>':'<span class="tag u">renewal unverified</span>')+(it&&it!==rn?'<div class="intro">intro '+it+'</div>':'')+(c!="USD"?'<div class="intro">'+c+(h.id=="hetzner"?" excl. VAT":"")+'</div>':'')+'</td>'+
-   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+h.url+'" rel="nofollow noopener" target="_blank">source</a> <span>checked '+h.checked+'</span> <a class="btn s" href="'+h.affiliate+'" rel="sponsored nofollow" data-todo="affiliate-link">View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
+   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+h.url+'" rel="nofollow noopener" target="_blank">source</a> <span>checked '+h.checked+'</span> <a class="btn s" href="'+(h.affiliate_url||h.url)+'" target="_blank" rel="nofollow sponsored noopener">View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
   $("#count").textContent=r.length+" plans";var m=$("#more");m.textContent="Show all "+r.length+" plans";m.classList.toggle("show",r.length>8&&tb.parentNode.classList.contains("lim"))}
  $("#more").onclick=function(){tb.parentNode.classList.remove("lim");this.classList.remove("show")};
+ var so=$("#sort");if(so)so.addEventListener("change",function(){sk=so.value;dir=(sk=="ram"||sk=="vcpu")?-1:1;draw()});
  ["#q","#ram","#oc","#ty"].forEach(function(s){$(s).addEventListener("input",draw)});
- document.querySelectorAll("th[data-k]").forEach(function(th){th.addEventListener("click",function(){var k=th.dataset.k;dir=k==sk?-dir:1;sk=k;draw()})});draw()}
+ document.querySelectorAll("th[data-k]").forEach(function(th){th.addEventListener("click",function(){var k=th.dataset.k;dir=k==sk?-dir:1;sk=k;if(so&&so.querySelector("option[value="+k+"]"))so.value=k;draw()})});draw()}
 // calculator
 var cf=$("#calc");if(cf){var list=$("#wfs");
  function addRow(n,f){var d=document.createElement("div");d.className="wf";d.innerHTML='<label class="small">Workflows<input type="number" min="0" value="'+n+'" class="n"></label><label class="small">Each runs<select class="fq"><option value="43200">every minute</option><option value="8640">every 5 min</option><option value="2880">every 15 min</option><option value="720">hourly</option><option value="30">daily</option><option value="4">weekly</option><option value="1">monthly</option><option value="100">~100×/mo (webhook)</option><option value="1000">~1,000×/mo (webhook)</option></select></label><button type="button" class="btn s" aria-label="remove">✕</button>';
@@ -33,5 +34,6 @@ var cf=$("#calc");if(cf){var list=$("#wfs");
   else s.innerHTML="Above n8n Cloud's published tiers, self-hosting is the only fixed-price option: from <b>$"+(v?v.renew.toFixed(2):"?")+"/mo</b> with unlimited executions.";
   $("#needram").textContent=need}
  addRow(5,"720");addRow(3,"30");$("#add").onclick=function(){addRow(1,"30");calc()};cf.addEventListener("input",calc);cf.addEventListener("change",calc);calc()}
-var nf=$("#newsletter");if(nf)nf.addEventListener("submit",function(e){e.preventDefault();$("#nlmsg").textContent="Thanks! (Placeholder — no email service is connected yet, nothing was sent.)"})
+var nf=$("#newsletter");if(nf&&window.fetch)nf.addEventListener("submit",function(e){e.preventDefault();var m=$("#nlmsg"),b=nf.querySelector("button");b.disabled=true;m.textContent="Sending…";
+ fetch(nf.action,{method:"POST",body:new FormData(nf),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;m.textContent="Check your inbox to confirm!";nf.reset()}).catch(function(){nf.submit();m.textContent="Opening signup in a new tab…"}).finally(function(){b.disabled=false})})
 })();

@@ -7,7 +7,6 @@
    "type": "vps",
    "one_click_n8n": true,
    "url": "https://www.hostinger.com/self-hosted-n8n",
-   "affiliate": "#TODO-affiliate-hostinger",
    "notes": "Intro price requires 24-month prepay; renews at the listed renewal price.",
    "plans": [
     {
@@ -63,7 +62,8 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "contabo",
@@ -71,7 +71,6 @@
    "type": "vps",
    "one_click_n8n": true,
    "url": "https://contabo.com/en-us/n8n-hosting/",
-   "affiliate": "#TODO-affiliate-contabo",
    "notes": "Intro price is 'for the first 24 months' on a 24-month term (incl. applicable taxes). Renewal shown = struck-through regular price on the same page; not explicitly labelled as renewal.",
    "plans": [
     {
@@ -127,7 +126,8 @@
      "note": "Renewal = regular list price (assumed)"
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "hetzner",
@@ -135,7 +135,6 @@
    "type": "vps",
    "one_click_n8n": false,
    "url": "https://www.hetzner.com/cloud/",
-   "affiliate": "#TODO-affiliate-hetzner",
    "notes": "Prices EUR excl. VAT, hourly billing, no term. Only 'starting from' prices were readable; per-plan prices load client-side and were not captured. n8n is not in Hetzner's one-click app list (Docker CE / Coolify are).",
    "plans": [
     {
@@ -178,7 +177,8 @@
      "note": "Price not captured"
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "ovh",
@@ -186,7 +186,6 @@
    "type": "vps",
    "one_click_n8n": null,
    "url": "https://us.ovhcloud.com/vps/",
-   "affiliate": "#TODO-affiliate-ovh",
    "notes": "'Starting at' prices (US site). Renewal / commitment conditions not verified.",
    "plans": [
     {
@@ -242,7 +241,8 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "racknerd",
@@ -250,7 +250,6 @@
    "type": "vps",
    "one_click_n8n": null,
    "url": "https://www.racknerd.com/kvm-vps",
-   "affiliate": "#TODO-affiliate-racknerd",
    "notes": "Standard KVM list prices. RackNerd's famous cheap deals are time-limited promos and are not included.",
    "plans": [
     {
@@ -293,7 +292,8 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "digitalocean",
@@ -301,7 +301,6 @@
    "type": "vps",
    "one_click_n8n": null,
    "url": "https://www.digitalocean.com/pricing/droplets",
-   "affiliate": "#TODO-affiliate-digitalocean",
    "notes": "Basic Droplets (Regular CPU). Hourly billing, no term.",
    "plans": [
     {
@@ -344,7 +343,8 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "vultr",
@@ -353,7 +353,6 @@
    "one_click_n8n": null,
    "url": "https://www.vultr.com/pricing/",
    "api": "https://api.vultr.com/v2/plans?type=vc2",
-   "affiliate": "#TODO-affiliate-vultr",
    "notes": "Cloud Compute Regular Performance. Hourly billing.",
    "plans": [
     {
@@ -396,16 +395,16 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "linode",
    "name": "Akamai / Linode",
    "type": "vps",
    "one_click_n8n": null,
-   "url": "https://www.linode.com/pricing/",
+   "url": "https://www.akamai.com/cloud/pricing",
    "api": "https://api.linode.com/v4/linode/types",
-   "affiliate": "#TODO-affiliate-linode",
    "notes": "Shared CPU plans, prices from Linode's public types API.",
    "plans": [
     {
@@ -448,7 +447,8 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "railway",
@@ -456,7 +456,6 @@
    "type": "paas",
    "one_click_n8n": null,
    "url": "https://railway.com/pricing",
-   "affiliate": "#TODO-affiliate-railway",
    "notes": "Usage-based PaaS: Hobby $5/mo minimum incl. $5 usage credit; RAM $0.00000386/GB-sec, CPU $0.00000772/vCPU-sec. Real n8n cost depends on usage, so no fixed plan price.",
    "plans": [
     {
@@ -486,7 +485,8 @@
      "note": "$20 minimum usage"
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   },
   {
    "id": "elestio",
@@ -494,7 +494,6 @@
    "type": "managed",
    "one_click_n8n": true,
    "url": "https://elest.io/open-source/n8n",
-   "affiliate": "#TODO-affiliate-elestio",
    "notes": "Fully managed n8n on your choice of cloud. Only the 'starting at' price was verified; specs per tier not captured.",
    "plans": [
     {
@@ -511,7 +510,8 @@
      "note": "'starting at $11/mo'; specs not verified"
     }
    ],
-   "checked": "2026-10-22"
+   "checked": "2026-10-22",
+   "affiliate_url": null
   }
  ],
  "n8n_cloud": {
