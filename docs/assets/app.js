@@ -35,5 +35,8 @@ var cf=$("#calc");if(cf){var list=$("#wfs");
   $("#needram").textContent=need}
  addRow(5,"720");addRow(3,"30");$("#add").onclick=function(){addRow(1,"30");calc()};cf.addEventListener("input",calc);cf.addEventListener("change",calc);calc()}
 var nf=$("#newsletter");if(nf&&window.fetch)nf.addEventListener("submit",function(e){e.preventDefault();var m=$("#nlmsg"),b=nf.querySelector("button");b.disabled=true;m.textContent="Sending…";
- fetch(nf.action,{method:"POST",body:new FormData(nf),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;m.textContent="Check your inbox to confirm!";nf.reset()}).catch(function(){nf.submit();m.textContent="Opening signup in a new tab…"}).finally(function(){b.disabled=false})})
+ fetch(nf.action,{method:"POST",body:new FormData(nf),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){j=j||{};
+  if(j.status=="success"){m.textContent="Check your inbox to confirm!";nf.reset()}
+  else if(j.url){var w=window.open(j.url,"_blank","noopener");m.innerHTML='One quick check to confirm you\u2019re human: <a href="'+encodeURI(j.url)+'" target="_blank" rel="noopener">'+(w?"complete it in the new tab":"open the check")+'</a>, then check your inbox.'}
+  else throw 0}).catch(function(){nf.submit();m.textContent="Opening signup in a new tab…"}).finally(function(){b.disabled=false})})
 })();
