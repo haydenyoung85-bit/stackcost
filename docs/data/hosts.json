@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22",
+ "updated": "2026-10-26",
  "hosts": [
   {
    "id": "hostinger",
@@ -62,7 +62,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -126,7 +126,7 @@
      "note": "Renewal = regular list price (assumed)"
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -135,10 +135,10 @@
    "type": "vps",
    "one_click_n8n": false,
    "url": "https://www.hetzner.com/cloud/",
-   "notes": "Prices EUR excl. VAT, hourly billing, no term. Only 'starting from' prices were readable; per-plan prices load client-side and were not captured. n8n is not in Hetzner's one-click app list (Docker CE / Coolify are).",
+   "notes": "Prices EUR excl. VAT, hourly billing with a monthly cap, no term. Per-plan prices read from Hetzner's Cost-Optimized and Regular Performance pages; EU-location prices shown (Singapore costs more; US locations use separate, pricier CPX11-CPX51 plans). Cost-Optimized (CX) plans were marked 'not available' when checked. n8n is not in Hetzner's one-click app list (Docker CE / Coolify are).",
    "plans": [
     {
-     "name": "Cost-Optimized (from, e.g. CX23)",
+     "name": "CX23 (Cost-Optimized)",
      "vcpu": 2,
      "ram_gb": 4,
      "storage_gb": 40,
@@ -148,36 +148,67 @@
      "renewal_price_mo": 5.99,
      "term": "none (hourly)",
      "verified": true,
-     "note": "'starting from' price; plan marked currently unavailable"
+     "note": "Marked 'not available' on Hetzner's page when checked",
+     "src": "https://www.hetzner.com/cloud/cost-optimized/"
     },
     {
-     "name": "Regular Performance (from, CPX)",
-     "vcpu": null,
-     "ram_gb": null,
-     "storage_gb": null,
+     "name": "CX33 (Cost-Optimized)",
+     "vcpu": 4,
+     "ram_gb": 8,
+     "storage_gb": 80,
+     "storage_type": "NVMe",
+     "currency": "EUR",
+     "intro_price_mo": 8.99,
+     "renewal_price_mo": 8.99,
+     "term": "none (hourly)",
+     "verified": true,
+     "note": "Marked 'not available' on Hetzner's page when checked",
+     "src": "https://www.hetzner.com/cloud/cost-optimized/"
+    },
+    {
+     "name": "CPX02 (Regular Performance)",
+     "vcpu": 1,
+     "ram_gb": 1,
+     "storage_gb": 20,
      "storage_type": "NVMe",
      "currency": "EUR",
      "intro_price_mo": 6.49,
      "renewal_price_mo": 6.49,
      "term": "none (hourly)",
      "verified": true,
-     "note": "'starting from' price; which spec it maps to not verified"
+     "note": "EU locations; 1 GB RAM is too small for most n8n setups",
+     "src": "https://www.hetzner.com/cloud/regular-performance/"
     },
     {
-     "name": "CPX22",
+     "name": "CPX12 (Regular Performance)",
+     "vcpu": 1,
+     "ram_gb": 2,
+     "storage_gb": 40,
+     "storage_type": "NVMe",
+     "currency": "EUR",
+     "intro_price_mo": 11.99,
+     "renewal_price_mo": 11.99,
+     "term": "none (hourly)",
+     "verified": true,
+     "note": "EU locations",
+     "src": "https://www.hetzner.com/cloud/regular-performance/"
+    },
+    {
+     "name": "CPX22 (Regular Performance)",
      "vcpu": 2,
      "ram_gb": 4,
      "storage_gb": 80,
      "storage_type": "NVMe",
      "currency": "EUR",
-     "intro_price_mo": null,
-     "renewal_price_mo": null,
+     "intro_price_mo": 19.99,
+     "renewal_price_mo": 19.99,
      "term": "none (hourly)",
-     "verified": false,
-     "note": "Price not captured"
+     "verified": true,
+     "note": "EU locations",
+     "src": "https://www.hetzner.com/cloud/regular-performance/"
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -241,7 +272,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -292,7 +323,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -343,7 +374,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -366,7 +397,8 @@
      "renewal_price_mo": 10.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 2
     },
     {
      "name": "vc2-2c-4gb",
@@ -379,7 +411,8 @@
      "renewal_price_mo": 20.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 3
     },
     {
      "name": "vc2-4c-8gb",
@@ -392,10 +425,11 @@
      "renewal_price_mo": 40.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 4
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -405,7 +439,7 @@
    "one_click_n8n": null,
    "url": "https://www.akamai.com/cloud/pricing",
    "api": "https://api.linode.com/v4/linode/types",
-   "notes": "Shared CPU plans, prices from Linode's public types API.",
+   "notes": "Shared CPU plans, prices from Linode's public types API (default region pricing; some regions such as Jakarta and S\u00e3o Paulo cost more).",
    "plans": [
     {
      "name": "Linode 2 GB",
@@ -418,7 +452,8 @@
      "renewal_price_mo": 12.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 2
     },
     {
      "name": "Linode 4 GB",
@@ -431,7 +466,8 @@
      "renewal_price_mo": 24.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 4
     },
     {
      "name": "Linode 8 GB",
@@ -444,10 +480,11 @@
      "renewal_price_mo": 48.0,
      "term": "none (hourly)",
      "verified": true,
-     "note": null
+     "note": null,
+     "transfer_tb": 5
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -485,7 +522,7 @@
      "note": "$20 minimum usage"
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   },
   {
@@ -510,13 +547,13 @@
      "note": "'starting at $11/mo'; specs not verified"
     }
    ],
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "affiliate_url": null
   }
  ],
  "n8n_cloud": {
   "url": "https://n8n.io/pricing/",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "notes": "Executions = full workflow runs, unlimited steps. Business is listed as self-hosted.",
   "plans": [
    {
