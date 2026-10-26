@@ -3,7 +3,8 @@ var sym={USD:"$",EUR:"€"};function money(v,c){return v==null?null:(sym[c]||"")
 var rows=[];D.hosts.forEach(function(h){h.plans.forEach(function(p){rows.push({h:h,p:p,renew:p.renewal_price_mo,intro:p.intro_price_mo,ram:p.ram_gb,vcpu:p.vcpu})})});
 window.SCrows=rows;
 var tb=$("#tbody");if(tb){var sk="renew",dir=1;
- function oc(v){return v===true?'<span class="tag">1-click n8n</span>':v===false?'<span class="tag g">Docker install</span>':'<span class="tag u">1-click: unverified</span>'}
+ function fd(s){var m=/^(\d{4})-(\d\d)-(\d\d)/.exec(s||"");return m?["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+m[2]-1]+" "+(+m[3]):(s||"")}
+ function oc(v){return v===true?'<span class="tag">One-click n8n install</span>':v===false?'<span class="tag g">Docker install</span>':'<span class="tag u">One-click install: unverified</span>'}
  function draw(){var q=($("#q").value||"").toLowerCase(),mr=+$("#ram").value||0,oneOnly=$("#oc").checked,ty=$("#ty").value;
   var r=rows.filter(function(x){return (x.h.name+" "+x.p.name).toLowerCase().indexOf(q)>-1&&(!mr||(x.ram||0)>=mr)&&(!oneOnly||x.h.one_click_n8n===true)&&(!ty||x.h.type===ty)});
   r.sort(function(a,b){var A=a[sk],B=b[sk];if(sk=="host"){A=a.h.name;B=b.h.name;return A<B?-dir:A>B?dir:0}if(A==null)return 1;if(B==null)return -1;return (A-B)*dir});
@@ -11,7 +12,7 @@ var tb=$("#tbody");if(tb){var sk="renew",dir=1;
    var spec=[p.vcpu!=null?p.vcpu+" vCPU":"? vCPU",p.ram_gb!=null?p.ram_gb+" GB RAM":"? RAM",p.storage_gb!=null?p.storage_gb+" GB "+(p.storage_type||""):"? disk"].join(" · ");
    return '<tr><td class="h">'+h.name+'<div class="small">'+p.name+'</div></td><td class="spec">'+spec+'</td>'+
    '<td class="price num">'+(rn?'<div class="renew">'+rn+'<span class="small">/mo</span></div>':'<span class="tag u">renewal unverified</span>')+(it&&it!==rn?'<div class="intro">intro '+it+'</div>':'')+(c!="USD"?'<div class="intro">'+c+(h.id=="hetzner"?" excl. VAT":"")+'</div>':'')+'</td>'+
-   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+h.url+'" rel="nofollow noopener" target="_blank">source</a> <span>checked '+h.checked+'</span> <a class="btn s" href="'+(h.affiliate_url||h.url)+'" target="_blank" rel="nofollow sponsored noopener">View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
+   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+h.url+'" rel="nofollow noopener" target="_blank">Price source</a> <span title="Price checked '+h.checked+'">Price checked '+fd(h.checked)+'</span><span class="br"></span> <a class="btn s" href="'+(h.affiliate_url||h.url)+'" target="_blank" rel="nofollow sponsored noopener">View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
   $("#count").textContent=r.length+" plans";var m=$("#more");m.textContent="Show all "+r.length+" plans";m.classList.toggle("show",r.length>8&&tb.parentNode.classList.contains("lim"))}
  $("#more").onclick=function(){tb.parentNode.classList.remove("lim");this.classList.remove("show")};
  var so=$("#sort");if(so)so.addEventListener("change",function(){sk=so.value;dir=(sk=="ram"||sk=="vcpu")?-1:1;draw()});
