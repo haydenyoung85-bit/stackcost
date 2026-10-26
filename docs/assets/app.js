@@ -12,7 +12,7 @@ var tb=$("#tbody");if(tb){var sk="renew",dir=1;
    var spec=[p.vcpu!=null?p.vcpu+" vCPU":"? vCPU",p.ram_gb!=null?p.ram_gb+" GB RAM":"? RAM",p.storage_gb!=null?p.storage_gb+" GB "+(p.storage_type||""):"? disk"].join(" · ");
    return '<tr><td class="h">'+h.name+'<div class="small">'+p.name+'</div></td><td class="spec">'+spec+'</td>'+
    '<td class="price num">'+(rn?'<div class="renew">'+rn+'<span class="small">/mo</span></div>':'<span class="tag u">renewal unverified</span>')+(it&&it!==rn?'<div class="intro">intro '+it+'</div>':'')+(c!="USD"?'<div class="intro">'+c+(h.id=="hetzner"?" excl. VAT":"")+'</div>':'')+'</td>'+
-   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+(p.src||h.url)+'" rel="nofollow noopener" target="_blank">Price source</a> <span title="Price checked '+h.checked+'">Price checked '+fd(h.checked)+'</span><span class="br"></span> <a class="btn s" href="'+(h.affiliate_url||h.url)+'" target="_blank" rel="nofollow sponsored noopener">View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
+   '<td class="meta">'+p.term+' '+oc(h.one_click_n8n)+(p.note?' <span title="'+p.note.replace(/"/g,"&quot;")+'" class="tag u">note</span>':'')+' <a href="'+(p.src||h.url)+'" rel="nofollow noopener" target="_blank">Price source</a> <span title="Price checked '+h.checked+'">Price checked '+fd(h.checked)+'</span><span class="br"></span> <a class="btn s" href="'+(h.affiliate_url||h.url)+'" target="_blank" rel="nofollow sponsored noopener"'+(h.affiliate_url?' title="Affiliate link"':'')+'>View deal*</a></td></tr>'}).join("")||'<tr><td>No plans match.</td></tr>';
   $("#count").textContent=r.length+" plans";var m=$("#more");m.textContent="Show all "+r.length+" plans";m.classList.toggle("show",r.length>8&&tb.parentNode.classList.contains("lim"))}
  $("#more").onclick=function(){tb.parentNode.classList.remove("lim");this.classList.remove("show")};
  var so=$("#sort");if(so)so.addEventListener("change",function(){sk=so.value;dir=(sk=="ram"||sk=="vcpu")?-1:1;draw()});
@@ -30,7 +30,7 @@ var cf=$("#calc");if(cf){var list=$("#wfs");
   $("#ex").textContent=Math.round(ex).toLocaleString();
   var cc=t?(bill=="annual"?t.annual_mo:t.monthly):null;
   $("#cloud").innerHTML=t?"$"+cc+"<span class=small>/mo</span>":"Enterprise";$("#cloudn").textContent=t?"n8n "+t.name+" ("+t.executions.toLocaleString()+" exec/mo)":"over "+tiers[tiers.length-1].executions.toLocaleString()+" exec/mo — contact n8n sales";
-  $("#vps").innerHTML=v?"$"+v.renew.toFixed(2)+"<span class=small>/mo</span>":"—";$("#vpsn").textContent=v?v.h.name+" "+v.p.name+" ("+v.ram+" GB RAM, renewal price)":"";
+  $("#vps").innerHTML=v?"$"+v.renew.toFixed(2)+"<span class=small>/mo</span>":"—";$("#vpsn").textContent=v?v.h.name+" "+v.p.name+" ("+v.ram+" GB RAM, renewal price, "+v.p.term+")":"";
   var s=$("#save");if(t&&v){var y=(cc-v.renew)*12;s.innerHTML=(y>=0?"Self-hosting saves <b>$"+y.toFixed(0)+"/yr</b>":"n8n Cloud is cheaper by <b>$"+(-y).toFixed(0)+"/yr</b>")+" on sticker price. Add your own time for updates & backups (est. 1–2 h/mo).";}
   else s.innerHTML="Above n8n Cloud's published tiers, self-hosting is the only fixed-price option: from <b>$"+(v?v.renew.toFixed(2):"?")+"/mo</b> with unlimited executions.";
   $("#needram").textContent=need}

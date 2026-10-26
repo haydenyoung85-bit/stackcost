@@ -279,12 +279,72 @@
    "id": "racknerd",
    "name": "RackNerd",
    "type": "vps",
-   "one_click_n8n": null,
-   "url": "https://www.racknerd.com/kvm-vps",
-   "notes": "Standard KVM list prices. RackNerd's famous cheap deals are time-limited promos and are not included.",
+   "one_click_n8n": true,
+   "url": "https://www.racknerd.com/specials/",
+   "notes": "Unmanaged KVM VPS with full root. n8n is a one-click app in RackNerd's ctrl panel (needs 2+ vCPU and 2+ GB RAM; the install wipes the VPS first), and RackNerd's Terms of Service allow Docker/Compose containers (no nested virtualization). The lowest prices are 12-month prepaid plans on RackNerd's Specials page (renewal at the same rate per RackNerd's FAQ, but plans are 'while available' and can change). Monthly list-price plans cost several times more per month. Support is advertised as 24/7; we have not tested its quality. Refunds are case-by-case. StackCost earns a commission if you order through the View deal link (affiliate); this does not change rankings.",
    "plans": [
     {
-     "name": "KVM 2 GB",
+     "name": "2 GB KVM (yearly)",
+     "vcpu": 2,
+     "ram_gb": 2,
+     "storage_gb": 35,
+     "storage_type": "SSD",
+     "currency": "USD",
+     "intro_price_mo": 3.0,
+     "renewal_price_mo": 3.0,
+     "term": "12 months prepaid ($35.99/yr)",
+     "verified": true,
+     "note": "12-month prepay ($35.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS. Meets n8n one-click minimum (2 vCPU / 2 GB); RackNerd suggests 4 GB for production with Postgres.",
+     "transfer_tb": 5,
+     "src": "https://www.racknerd.com/specials/"
+    },
+    {
+     "name": "4 GB KVM (yearly)",
+     "vcpu": 3,
+     "ram_gb": 4,
+     "storage_gb": 60,
+     "storage_type": "SSD",
+     "currency": "USD",
+     "intro_price_mo": 5.0,
+     "renewal_price_mo": 5.0,
+     "term": "12 months prepaid ($59.99/yr)",
+     "verified": true,
+     "note": "12-month prepay ($59.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
+     "transfer_tb": 7,
+     "src": "https://www.racknerd.com/specials/"
+    },
+    {
+     "name": "6 GB KVM (yearly)",
+     "vcpu": 6,
+     "ram_gb": 6,
+     "storage_gb": 100,
+     "storage_type": "SSD",
+     "currency": "USD",
+     "intro_price_mo": 7.5,
+     "renewal_price_mo": 7.5,
+     "term": "12 months prepaid ($89.99/yr)",
+     "verified": true,
+     "note": "12-month prepay ($89.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
+     "transfer_tb": 12,
+     "src": "https://www.racknerd.com/specials/"
+    },
+    {
+     "name": "8 GB KVM (yearly)",
+     "vcpu": 7,
+     "ram_gb": 8,
+     "storage_gb": 150,
+     "storage_type": "SSD",
+     "currency": "USD",
+     "intro_price_mo": 10.0,
+     "renewal_price_mo": 10.0,
+     "term": "12 months prepaid ($119.99/yr)",
+     "verified": true,
+     "note": "12-month prepay ($119.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
+     "transfer_tb": 20,
+     "src": "https://www.racknerd.com/specials/"
+    },
+    {
+     "name": "2 GB KVM (monthly)",
      "vcpu": 3,
      "ram_gb": 2,
      "storage_gb": 75,
@@ -294,10 +354,11 @@
      "renewal_price_mo": 20.59,
      "term": "monthly",
      "verified": true,
-     "note": null
+     "note": "Month-to-month list price read on RackNerd's KVM VPS page. The page does not state a renewal price; renewal assumed equal to the listed monthly price. Locations listed on that page: LA, San Jose, Seattle, Dallas, Atlanta, Chicago, New York, Ashburn, Amsterdam, France, Dublin, Toronto. Unmanaged.",
+     "src": "https://www.racknerd.com/kvm-vps"
     },
     {
-     "name": "KVM 4 GB",
+     "name": "4 GB KVM (monthly)",
      "vcpu": 4,
      "ram_gb": 4,
      "storage_gb": 130,
@@ -307,10 +368,11 @@
      "renewal_price_mo": 24.59,
      "term": "monthly",
      "verified": true,
-     "note": null
+     "note": "Month-to-month list price read on RackNerd's KVM VPS page. The page does not state a renewal price; renewal assumed equal to the listed monthly price. Locations listed on that page: LA, San Jose, Seattle, Dallas, Atlanta, Chicago, New York, Ashburn, Amsterdam, France, Dublin, Toronto. Unmanaged.",
+     "src": "https://www.racknerd.com/kvm-vps"
     },
     {
-     "name": "KVM 8 GB",
+     "name": "8 GB KVM (monthly)",
      "vcpu": 6,
      "ram_gb": 8,
      "storage_gb": 220,
@@ -320,11 +382,12 @@
      "renewal_price_mo": 36.59,
      "term": "monthly",
      "verified": true,
-     "note": null
+     "note": "Month-to-month list price read on RackNerd's KVM VPS page. The page does not state a renewal price; renewal assumed equal to the listed monthly price. Locations listed on that page: LA, San Jose, Seattle, Dallas, Atlanta, Chicago, New York, Ashburn, Amsterdam, France, Dublin, Toronto. Unmanaged.",
+     "src": "https://www.racknerd.com/kvm-vps"
     }
    ],
    "checked": "2026-10-26",
-   "affiliate_url": null
+   "affiliate_url": "https://my.racknerd.com/aff.php?aff=21700"
   },
   {
    "id": "digitalocean",
