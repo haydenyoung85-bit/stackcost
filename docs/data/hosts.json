@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-11-02",
  "hosts": [
   {
    "id": "hostinger",
@@ -62,7 +62,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -126,7 +126,7 @@
      "note": "Renewal = regular list price (assumed)"
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -208,7 +208,7 @@
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -272,7 +272,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -386,7 +386,7 @@
      "src": "https://www.racknerd.com/kvm-vps"
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": "https://my.racknerd.com/aff.php?aff=21700"
   },
   {
@@ -437,7 +437,7 @@
      "note": null
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -492,7 +492,7 @@
      "transfer_tb": 4
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -547,7 +547,7 @@
      "transfer_tb": 5
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -585,7 +585,7 @@
      "note": "$20 minimum usage"
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   },
   {
@@ -610,13 +610,13 @@
      "note": "'starting at $11/mo'; specs not verified"
     }
    ],
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "affiliate_url": null
   }
  ],
  "n8n_cloud": {
   "url": "https://n8n.io/pricing/",
-  "checked": "2026-10-26",
+  "checked": "2026-11-02",
   "notes": "Executions = full workflow runs, unlimited steps. Business is listed as self-hosted.",
   "plans": [
    {
