@@ -1,9 +1,8 @@
 {
- "checked": "2026-11-02T09:04",
+ "checked": "2026-11-09T09:02",
  "issues": [
   "racknerd 6 GB KVM (yearly) intro_price_mo=7.5 no longer found on page",
   "racknerd 6 GB KVM (yearly) renewal_price_mo=7.5 no longer found on page",
-  "hetzner: prices on page changed (+['\u20ac 72.70'] -['\u20ac 67.70'])",
-  "racknerd: prices on page changed (+['$ 119.99', '$ 21.99', '$ 35.99', '$ 59.99', '$ 89.99', '$119.99', '$21.99', '$35.99', '$59.99', '$89.99'] -['$17.99', '$20.59', '$24.59', '$26.99', '$27.59', '$36.59', '$55.99'])"
+  "hetzner: prices on page changed (+['\u20ac 61.70'] -['\u20ac 72.70'])"
  ]
 }
