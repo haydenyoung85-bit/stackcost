@@ -56,7 +56,7 @@ def main():
                     pt=src[p["src"]]
                 for k in("intro_price_mo","renewal_price_mo"):
                     v=p[k]
-                    if v is not None and p["verified"] and not present(v,pt): issues.append(f"{h['id']} {p['name']} {k}={v} no longer found on page")
+                    if v is not None and p["verified"] and not present(v,pt) and not (re.search(r"\$([\d.]+)/yr",p.get("term") or "") and present(float(re.search(r"\$([\d.]+)/yr",p["term"]).group(1)),pt)): issues.append(f"{h['id']} {p['name']} {k}={v} no longer found on page")
             newsnap[h["id"]]=sorted(set(re.findall(r"[$€]\s?\d+(?:\.\d{2})?",t)))
         except Exception as e: issues.append(f"{h['id']}: fetch failed ({e.__class__.__name__}: {e})")
     try:

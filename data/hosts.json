@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-16",
  "hosts": [
   {
    "id": "hostinger",
@@ -62,7 +62,7 @@
      "note": null
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -126,7 +126,7 @@
      "note": "Renewal = regular list price (assumed)"
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -135,7 +135,7 @@
    "type": "vps",
    "one_click_n8n": false,
    "url": "https://www.hetzner.com/cloud/",
-   "notes": "Prices EUR excl. VAT, hourly billing with a monthly cap, no term. Per-plan prices read from Hetzner's Cost-Optimized and Regular Performance pages; EU-location prices shown (Singapore costs more; US locations use separate, pricier CPX11-CPX51 plans). Cost-Optimized (CX) plans were marked 'not available' when checked. n8n is not in Hetzner's one-click app list (Docker CE / Coolify are).",
+   "notes": "Prices EUR excl. VAT, hourly billing with a monthly cap, no term. Per-plan prices read from Hetzner's Cost-Optimized and Regular Performance pages; Regular Performance prices are Hetzner's lowest 'from' price (Helsinki; Falkenstein/Nuremberg cost more, Singapore more still; US locations use separate, pricier CPX11-CPX51 plans). Cost-Optimized (CX) plans were marked 'not available' when checked. n8n is not in Hetzner's one-click app list (Docker CE / Coolify are).",
    "plans": [
     {
      "name": "CX23 (Cost-Optimized)",
@@ -172,11 +172,11 @@
      "storage_gb": 20,
      "storage_type": "NVMe",
      "currency": "EUR",
-     "intro_price_mo": 6.49,
-     "renewal_price_mo": 6.49,
+     "intro_price_mo": 5.49,
+     "renewal_price_mo": 5.49,
      "term": "none (hourly)",
      "verified": true,
-     "note": "EU locations; 1 GB RAM is too small for most n8n setups",
+     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac6.49, Singapore \u20ac7.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16; 1 GB RAM is too small for most n8n setups",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     },
     {
@@ -186,11 +186,11 @@
      "storage_gb": 40,
      "storage_type": "NVMe",
      "currency": "EUR",
-     "intro_price_mo": 11.99,
-     "renewal_price_mo": 11.99,
+     "intro_price_mo": 9.99,
+     "renewal_price_mo": 9.99,
      "term": "none (hourly)",
      "verified": true,
-     "note": "EU locations",
+     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac11.99, Singapore \u20ac15.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     },
     {
@@ -200,15 +200,15 @@
      "storage_gb": 80,
      "storage_type": "NVMe",
      "currency": "EUR",
-     "intro_price_mo": 19.99,
-     "renewal_price_mo": 19.99,
+     "intro_price_mo": 16.99,
+     "renewal_price_mo": 16.99,
      "term": "none (hourly)",
      "verified": true,
-     "note": "EU locations",
+     "note": "Hetzner's 'from' price (Helsinki); Nuremberg \u20ac19.99, Singapore \u20ac26.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -272,7 +272,7 @@
      "note": null
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -386,7 +386,7 @@
      "src": "https://www.racknerd.com/kvm-vps"
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": "https://my.racknerd.com/aff.php?aff=21700"
   },
   {
@@ -437,7 +437,7 @@
      "note": null
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -492,7 +492,7 @@
      "transfer_tb": 4
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -547,7 +547,7 @@
      "transfer_tb": 5
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -585,7 +585,7 @@
      "note": "$20 minimum usage"
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   },
   {
@@ -610,13 +610,13 @@
      "note": "'starting at $11/mo'; specs not verified"
     }
    ],
-   "checked": "2026-11-02",
+   "checked": "2026-11-16",
    "affiliate_url": null
   }
  ],
  "n8n_cloud": {
   "url": "https://n8n.io/pricing/",
-  "checked": "2026-11-02",
+  "checked": "2026-11-16",
   "notes": "Executions = full workflow runs, unlimited steps. Business is listed as self-hosted.",
   "plans": [
    {
