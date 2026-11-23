@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-23",
  "hosts": [
   {
    "id": "hostinger",
@@ -7,7 +7,7 @@
    "type": "vps",
    "one_click_n8n": true,
    "url": "https://www.hostinger.com/self-hosted-n8n",
-   "notes": "Intro price requires 24-month prepay; renews at the listed renewal price.",
+   "notes": "Intro price requires 24-month prepay; renews at the listed renewal price. APP plans are Hostinger's n8n-specific plans; KVM plans are its general VPS line.",
    "plans": [
     {
      "name": "KVM 1",
@@ -20,7 +20,8 @@
      "renewal_price_mo": 11.99,
      "term": "24 months prepaid",
      "verified": true,
-     "note": null
+     "note": "General KVM VPS plan (listed on hostinger.com/vps-hosting; n8n OS template available). Intro price needs a 24-month prepay.",
+     "src": "https://www.hostinger.com/vps-hosting"
     },
     {
      "name": "KVM 2",
@@ -33,7 +34,8 @@
      "renewal_price_mo": 14.99,
      "term": "24 months prepaid",
      "verified": true,
-     "note": null
+     "note": "General KVM VPS plan (listed on hostinger.com/vps-hosting; n8n OS template available). Intro price needs a 24-month prepay.",
+     "src": "https://www.hostinger.com/vps-hosting"
     },
     {
      "name": "KVM 4",
@@ -46,7 +48,8 @@
      "renewal_price_mo": 28.99,
      "term": "24 months prepaid",
      "verified": true,
-     "note": null
+     "note": "General KVM VPS plan (listed on hostinger.com/vps-hosting; n8n OS template available). Intro price needs a 24-month prepay.",
+     "src": "https://www.hostinger.com/vps-hosting"
     },
     {
      "name": "KVM 8",
@@ -59,10 +62,63 @@
      "renewal_price_mo": 49.99,
      "term": "24 months prepaid",
      "verified": true,
-     "note": null
+     "note": "General KVM VPS plan (listed on hostinger.com/vps-hosting; n8n OS template available). Intro price needs a 24-month prepay.",
+     "src": "https://www.hostinger.com/vps-hosting"
+    },
+    {
+     "name": "APP 1 (n8n)",
+     "vcpu": 1,
+     "ram_gb": 4,
+     "storage_gb": 40,
+     "storage_type": "NVMe",
+     "currency": "USD",
+     "intro_price_mo": 4.99,
+     "renewal_price_mo": 9.99,
+     "term": "24 months prepaid",
+     "verified": true,
+     "note": "Hostinger's n8n plan (microVM with n8n template) on hostinger.com/self-hosted-n8n. Black Friday intro price seen 2026-11-23; $119.76 upfront for 24 months, renews at $9.99/mo."
+    },
+    {
+     "name": "APP 2 (n8n)",
+     "vcpu": 2,
+     "ram_gb": 6,
+     "storage_gb": 80,
+     "storage_type": "NVMe",
+     "currency": "USD",
+     "intro_price_mo": 6.99,
+     "renewal_price_mo": 12.99,
+     "term": "24 months prepaid",
+     "verified": true,
+     "note": "Hostinger's n8n plan (microVM with n8n template) on hostinger.com/self-hosted-n8n. Black Friday intro price seen 2026-11-23; $167.76 upfront for 24 months, renews at $12.99/mo."
+    },
+    {
+     "name": "APP 3 (n8n)",
+     "vcpu": 3,
+     "ram_gb": 8,
+     "storage_gb": 120,
+     "storage_type": "NVMe",
+     "currency": "USD",
+     "intro_price_mo": 9.99,
+     "renewal_price_mo": 15.99,
+     "term": "24 months prepaid",
+     "verified": true,
+     "note": "Hostinger's n8n plan (microVM with n8n template) on hostinger.com/self-hosted-n8n. Black Friday intro price seen 2026-11-23; $239.76 upfront for 24 months, renews at $15.99/mo."
+    },
+    {
+     "name": "APP 4 (n8n)",
+     "vcpu": 4,
+     "ram_gb": 10,
+     "storage_gb": 160,
+     "storage_type": "NVMe",
+     "currency": "USD",
+     "intro_price_mo": 11.99,
+     "renewal_price_mo": 18.99,
+     "term": "24 months prepaid",
+     "verified": true,
+     "note": "Hostinger's n8n plan (microVM with n8n template) on hostinger.com/self-hosted-n8n. Black Friday intro price seen 2026-11-23; $287.76 upfront for 24 months, renews at $18.99/mo."
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -126,7 +182,7 @@
      "note": "Renewal = regular list price (assumed)"
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -176,7 +232,7 @@
      "renewal_price_mo": 5.49,
      "term": "none (hourly)",
      "verified": true,
-     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac6.49, Singapore \u20ac7.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16; 1 GB RAM is too small for most n8n setups",
+     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac6.49, Singapore \u20ac7.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16 and 2026-11-23; 1 GB RAM is too small for most n8n setups",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     },
     {
@@ -190,7 +246,7 @@
      "renewal_price_mo": 9.99,
      "term": "none (hourly)",
      "verified": true,
-     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac11.99, Singapore \u20ac15.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16",
+     "note": "Hetzner's 'from' price (Helsinki); Falkenstein \u20ac11.99, Singapore \u20ac15.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16 and 2026-11-23",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     },
     {
@@ -204,11 +260,11 @@
      "renewal_price_mo": 16.99,
      "term": "none (hourly)",
      "verified": true,
-     "note": "Hetzner's 'from' price (Helsinki); Nuremberg \u20ac19.99, Singapore \u20ac26.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16",
+     "note": "Hetzner's 'from' price (Helsinki); Nuremberg \u20ac19.99, Singapore \u20ac26.99. Page showed 'currently unavailable' for all CPX plans when checked 2026-11-16 and 2026-11-23",
      "src": "https://www.hetzner.com/cloud/regular-performance/"
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -272,7 +328,7 @@
      "note": null
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -284,63 +340,59 @@
    "notes": "Unmanaged KVM VPS with full root. n8n is a one-click app in RackNerd's ctrl panel (needs 2+ vCPU and 2+ GB RAM; the install wipes the VPS first), and RackNerd's Terms of Service allow Docker/Compose containers (no nested virtualization). The lowest prices are 12-month prepaid plans on RackNerd's Specials page (renewal at the same rate per RackNerd's FAQ, but plans are 'while available' and can change). Monthly list-price plans cost several times more per month. Support is advertised as 24/7; we have not tested its quality. Refunds are case-by-case. StackCost earns a commission if you order through the View deal link (affiliate); this does not change rankings.",
    "plans": [
     {
-     "name": "2 GB KVM (yearly)",
+     "name": "2.5 GB KVM (yearly)",
      "vcpu": 2,
-     "ram_gb": 2,
-     "storage_gb": 35,
+     "ram_gb": 2.5,
+     "storage_gb": 30,
      "storage_type": "SSD",
      "currency": "USD",
-     "intro_price_mo": 3.0,
-     "renewal_price_mo": 3.0,
-     "term": "12 months prepaid ($35.99/yr)",
+     "intro_price_mo": 2.33,
+     "renewal_price_mo": 2.33,
+     "term": "12 months prepaid ($27.98/yr)",
      "verified": true,
-     "note": "12-month prepay ($35.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS. Meets n8n one-click minimum (2 vCPU / 2 GB); RackNerd suggests 4 GB for production with Postgres.",
-     "transfer_tb": 5,
+     "note": "RackNerd Black Friday 2026 special (seen 2026-11-23, may be time-limited to order). RackNerd's FAQ says these specials are lifetime recurring: renew at the same rate. Unmanaged; refunds case-by-case per its ToS. Meets n8n one-click minimum (2 vCPU / 2 GB); RackNerd suggests 4 GB for production with Postgres.",
      "src": "https://www.racknerd.com/specials/"
     },
     {
      "name": "4 GB KVM (yearly)",
-     "vcpu": 3,
+     "vcpu": 4,
      "ram_gb": 4,
      "storage_gb": 60,
      "storage_type": "SSD",
      "currency": "USD",
-     "intro_price_mo": 5.0,
-     "renewal_price_mo": 5.0,
-     "term": "12 months prepaid ($59.99/yr)",
+     "intro_price_mo": 4.0,
+     "renewal_price_mo": 4.0,
+     "term": "12 months prepaid ($47.98/yr)",
      "verified": true,
-     "note": "12-month prepay ($59.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
-     "transfer_tb": 7,
+     "note": "RackNerd Black Friday 2026 special (seen 2026-11-23, may be time-limited to order). RackNerd's FAQ says these specials are lifetime recurring: renew at the same rate. Unmanaged; refunds case-by-case per its ToS.",
      "src": "https://www.racknerd.com/specials/"
     },
     {
      "name": "6 GB KVM (yearly)",
      "vcpu": 6,
      "ram_gb": 6,
-     "storage_gb": 100,
+     "storage_gb": 85,
      "storage_type": "SSD",
      "currency": "USD",
-     "intro_price_mo": 7.5,
-     "renewal_price_mo": 7.5,
-     "term": "12 months prepaid ($89.99/yr)",
+     "intro_price_mo": 6.25,
+     "renewal_price_mo": 6.25,
+     "term": "12 months prepaid ($74.98/yr)",
      "verified": true,
-     "note": "12-month prepay ($89.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
-     "transfer_tb": 12,
+     "note": "RackNerd Black Friday 2026 special (seen 2026-11-23, may be time-limited to order). RackNerd's FAQ says these specials are lifetime recurring: renew at the same rate. Unmanaged; refunds case-by-case per its ToS.",
      "src": "https://www.racknerd.com/specials/"
     },
     {
      "name": "8 GB KVM (yearly)",
-     "vcpu": 7,
+     "vcpu": 6,
      "ram_gb": 8,
-     "storage_gb": 150,
+     "storage_gb": 140,
      "storage_type": "SSD",
      "currency": "USD",
-     "intro_price_mo": 10.0,
-     "renewal_price_mo": 10.0,
-     "term": "12 months prepaid ($119.99/yr)",
+     "intro_price_mo": 7.92,
+     "renewal_price_mo": 7.92,
+     "term": "12 months prepaid ($94.98/yr)",
      "verified": true,
-     "note": "12-month prepay ($119.99/yr); 2-year option at exactly 2x. RackNerd's FAQ says the yearly plan renews at the same rate. Locations at checkout: New York, Los Angeles, Chicago, Dallas, Seattle. Unmanaged; refunds case-by-case per its ToS.",
-     "transfer_tb": 20,
+     "note": "RackNerd Black Friday 2026 special (seen 2026-11-23, may be time-limited to order). RackNerd's FAQ says these specials are lifetime recurring: renew at the same rate. Unmanaged; refunds case-by-case per its ToS.",
      "src": "https://www.racknerd.com/specials/"
     },
     {
@@ -386,7 +438,7 @@
      "src": "https://www.racknerd.com/kvm-vps"
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": "https://my.racknerd.com/aff.php?aff=21700"
   },
   {
@@ -437,7 +489,7 @@
      "note": null
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -492,7 +544,7 @@
      "transfer_tb": 4
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -547,7 +599,7 @@
      "transfer_tb": 5
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -585,7 +637,7 @@
      "note": "$20 minimum usage"
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   },
   {
@@ -610,13 +662,13 @@
      "note": "'starting at $11/mo'; specs not verified"
     }
    ],
-   "checked": "2026-11-16",
+   "checked": "2026-11-23",
    "affiliate_url": null
   }
  ],
  "n8n_cloud": {
   "url": "https://n8n.io/pricing/",
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "notes": "Executions = full workflow runs, unlimited steps. Business is listed as self-hosted.",
   "plans": [
    {
